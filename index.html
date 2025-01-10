@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .category {
+            padding: 10px 20px;
+            background: #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .category.active {
+            background: #007bff;
+            color: white;
+        }
+        .audio-item {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f7f7f7;
+            flex-direction: column;
+        }
+        .audio-item.active {
+            display: flex;
+        }
+        .audio-item h3 {
+            margin: 0 0 10px 0;
+            color: #555;
+        }
+        .audio-item audio {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+        }
+        .buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: #28a745;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .buttons a:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Golden Horn - Listenings</h1>
+        <div class="categories">
+            <div class="category active" data-category="A1">A1</div>
+            <div class="category" data-category="A2">A2</div>
+            <div class="category" data-category="B1">B1</div>
+            <div class="category" data-category="B2">B2</div>
+        </div>
+
+        <div class="audio-item active" data-category="B1">
+            <h3>Unit 1 Module B</h3>
+            <audio controls>
+                <source src="/listenings/B1_Unit_1_Module_B.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buttons">
+                <a href="/listenings/B1_Unit_1_Module_B.mp3" download>Download</a>
+            </div>
+        </div>
+        <div class="audio-item active" data-category="B1">
+            <h3>Unit 2 Module A</h3>
+            <audio controls>
+                <source src="/listenings/B1_Unit_2_Module_A.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buttons">
+                <a href="/listenings/B1_Unit_2_Module_A.mp3" download>Download</a>
+            </div>
+        </div>
+        <div class="audio-item active" data-category="B1">
+            <h3>Unit 2 Module C</h3>
+            <audio controls>
+                <source src="/listenings/B1_Unit_2_Module_C.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buttons">
+                <a href="/listenings/B1_Unit_2_Module_C.mp3" download>Download</a>
+            </div>
+        </div>
+        <div class="audio-item active" data-category="B1">
+            <h3>Unit 3 Module B</h3>
+            <audio controls>
+                <source src="/listenings/B1_Unit_3_Module_B.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buttons">
+                <a href="/listenings/B1_Unit_3_Module_B.mp3" download>Download</a>
+            </div>
+        </div>
+        <div class="audio-item active" data-category="B1">
+            <h3>Unit 4 Module A</h3>
+            <audio controls>
+                <source src="/listenings/B1_Unit_4_Module_A.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buttons">
+                <a href="/listenings/B1_Unit_4_Module_A.mp3" download>Download</a>
+            </div>
+        </div>
+        <div class="audio-item active" data-category="B1">
+            <h3>Unit 4 Module C</h3>
+            <audio controls>
+                <source src="/listenings/B1_Unit_4_Module_C.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buttons">
+                <a href="/listenings/B1_Unit_4_Module_C.mp3" download>Download</a>
+            </div>
+        </div>
+        <div class="audio-item active" data-category="B1">
+            <h3>Unit 5 Module B</h3>
+            <audio controls>
+                <source src="/listenings/B1_Unit_5_Module_B.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buttons">
+                <a href="/listenings/B1_Unit_5_Module_B.mp3" download>Download</a>
+            </div>
+        </div>
+        <div class="audio-item active" data-category="B1">
+            <h3>Unit 6 Module A</h3>
+            <audio controls>
+                <source src="/listenings/B1_Unit_6_Module_A.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buttons">
+                <a href="/listenings/B1_Unit_6_Module_A.mp3" download>Download</a>
+            </div>
+        </div>
+        <div class="audio-item active" data-category="B1">
+            <h3>Unit 6 Module C</h3>
+            <audio controls>
+                <source src="/listenings/B1_Unit_6_Module_C.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buttons">
+                <a href="/listenings/B1_Unit_6_Module_C.mp3" download>Download</a>
+            </div>
+        </div>
+        <div class="audio-item active" data-category="B1">
+            <h3>Unit 7 Module B</h3>
+            <audio controls>
+                <source src="/listenings/B1_Unit_7_Module_B.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buttons">
+                <a href="/listenings/B1_Unit_7_Module_B.mp3" download>Download</a>
+            </div>
+        </div>
+        <div class="audio-item active" data-category="B1">
+            <h3>Unit 8 Module A</h3>
+            <audio controls>
+                <source src="/listenings/B1_Unit_8_Module_A.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buttons">
+                <a href="/listenings/B1_Unit_8_Module_A.mp3" download>Download</a>
+            </div>
+        </div>
+        <div class="audio-item active" data-category="B1">
+            <h3>Unit 8 Module C</h3>
+            <audio controls>
+                <source src="/listenings/B1_Unit_8_Module_C.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buttons">
+                <a href="/listenings/B1_Unit_8_Module_C.mp3" download>Download</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const categories = document.querySelectorAll('.category');
+        const audioItems = document.querySelectorAll('.audio-item');
+
+        window.addEventListener('load', () => {
+            const activeCategory = document.querySelector('.category.active').getAttribute('data-category');
+            audioItems.forEach(item => {
+                if (item.getAttribute('data-category') === activeCategory) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        });
+        
+        categories.forEach(category => {
+            category.addEventListener('click', () => {
+                // Remove active class from all categories
+                categories.forEach(cat => cat.classList.remove('active'));
+                // Add active class to the clicked category
+                category.classList.add('active');
+
+                // Get selected category
+                const selectedCategory = category.getAttribute('data-category');
+
+                // Show or hide audio items based on category
+                audioItems.forEach(item => {
+                    if (item.getAttribute('data-category') === selectedCategory) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
